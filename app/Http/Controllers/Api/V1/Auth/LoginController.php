@@ -1,9 +1,10 @@
 <?php
 
-namespace app\Http\Controllers\Api\V1\Auth;
+namespace App\Http\Controllers\Api\V1\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Api\UserResource;
+use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,9 @@ class LoginController extends Controller
                 'message' => 'Unauthorized'
             ], 401);
         }
+        /**
+         * @var User $user
+         */
         $user = Auth::user();
 
         return response()->json([

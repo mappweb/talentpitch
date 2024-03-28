@@ -5,6 +5,8 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -19,7 +21,7 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var array<string>
      */
     protected $fillable = [
         'first_name',
@@ -57,5 +59,13 @@ class User extends Authenticatable
     public function getNameAttribute(): string
     {
         return $this->first_name . ' ' . $this->last_name;
+    }
+
+    /**
+     * @return MorphToMany
+     */
+    public function programs(): MorphToMany
+    {
+        return $this->morphToMany(Program::class, 'programmable');
     }
 }
