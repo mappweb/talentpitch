@@ -29,7 +29,7 @@ class PaginateProgramController extends Controller
     }
 
     /**
-     * Get all programs.
+     * Display a listing of programs
      *
      * @param Request $request
      * @return JsonResponse

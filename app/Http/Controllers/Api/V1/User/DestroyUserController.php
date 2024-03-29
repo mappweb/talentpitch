@@ -30,7 +30,7 @@ class DestroyUserController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Remove the specified user from storage.
      *
      * @param Request $request
      * @param User $user

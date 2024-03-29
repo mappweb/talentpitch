@@ -26,7 +26,7 @@ class CreateProgramController extends Controller
     }
 
     /**
-     * Create a challenge resource.
+     * Store a newly created program in storage.
      *
      * @param ProgramRequest $request
      * @return JsonResponse

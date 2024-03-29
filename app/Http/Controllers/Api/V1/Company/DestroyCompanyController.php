@@ -30,7 +30,7 @@ class DestroyCompanyController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Remove the specified company from storage.
      *
      * @param Request $request
      * @param Company $company

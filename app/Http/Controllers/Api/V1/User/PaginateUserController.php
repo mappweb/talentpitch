@@ -29,7 +29,7 @@ class PaginateUserController extends Controller
     }
 
     /**
-     * Get all programs.
+     * Display a listing of users
      *
      * @param Request $request
      * @return JsonResponse

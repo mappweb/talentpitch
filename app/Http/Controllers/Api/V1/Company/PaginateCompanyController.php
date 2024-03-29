@@ -29,7 +29,7 @@ class PaginateCompanyController extends Controller
     }
 
     /**
-     * Get all programs.
+     * Display a listing of companies
      *
      * @param Request $request
      * @return JsonResponse

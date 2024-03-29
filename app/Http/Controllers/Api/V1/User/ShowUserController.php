@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ShowUserController extends Controller
 {
     /**
-     * Find video.
+     * Display the specified user.
      *
      * @param Request $request
      * @param User $user

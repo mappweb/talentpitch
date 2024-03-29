@@ -29,7 +29,7 @@ class PaginateChallengeController extends Controller
     }
 
     /**
-     * Get all challenges.
+     * Display a listing of challenges.
      *
      * @param Request $request
      * @return JsonResponse

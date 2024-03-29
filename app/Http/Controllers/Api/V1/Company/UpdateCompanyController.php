@@ -30,7 +30,7 @@ class UpdateCompanyController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Update the specified company in storage.
      *
      * @param CompanyRequest $request
      * @param Company $company

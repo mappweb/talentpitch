@@ -12,22 +12,7 @@ use Illuminate\Http\Request;
 class ShowChallengeController extends Controller
 {
     /**
-     * @var ChallengeRepositoryInterface
-     */
-    private ChallengeRepositoryInterface $repository;
-
-    /**
-     * Instance Constructor.
-     *
-     * @param ChallengeRepositoryInterface $repository
-     */
-    public function __construct(ChallengeRepositoryInterface $repository)
-    {
-        $this->repository = $repository;
-    }
-
-    /**
-     * Find video.
+     * Display the specified challenge.
      *
      * @param Request $request
      * @param Challenge $challenge

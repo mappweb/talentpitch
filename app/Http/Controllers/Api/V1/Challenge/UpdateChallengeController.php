@@ -30,9 +30,10 @@ class UpdateChallengeController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Update the specified challenge in storage.
      *
      * @param ChallengeRequest $request
+     * @param Challenge $challenge
      * @return JsonResponse
      */
    public function __invoke(ChallengeRequest $request, Challenge $challenge): JsonResponse

@@ -26,7 +26,7 @@ class CreateCompanyController extends Controller
     }
 
     /**
-     * Create a challenge resource.
+     * Store a newly created company in storage.
      *
      * @param CompanyRequest $request
      * @return JsonResponse

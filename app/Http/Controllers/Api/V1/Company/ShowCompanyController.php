@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ShowCompanyController extends Controller
 {
     /**
-     * Find video.
+     * Display the specified company.
      *
      * @param Request $request
      * @param Company $company

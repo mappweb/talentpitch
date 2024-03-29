@@ -30,7 +30,7 @@ class DestroyProgramController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Remove the specified program from storage.
      *
      * @param Request $request
      * @param Program $program

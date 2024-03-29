@@ -30,9 +30,10 @@ class DestroyChallengeController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Remove the specified challenge from storage.
      *
      * @param Request $request
+     * @param Challenge $challenge
      * @return JsonResponse
      */
    public function __invoke(Request $request, Challenge $challenge): JsonResponse

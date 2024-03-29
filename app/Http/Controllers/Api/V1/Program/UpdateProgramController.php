@@ -30,7 +30,7 @@ class UpdateProgramController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Update the specified program in storage.
      *
      * @param ProgramRequest $request
      * @param Program $program

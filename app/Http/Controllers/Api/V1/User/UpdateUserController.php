@@ -30,7 +30,7 @@ class UpdateUserController extends Controller
     }
 
     /**
-     * Get all videos.
+     * Update the specified user in storage.
      *
      * @param UserRequest $request
      * @param User $user

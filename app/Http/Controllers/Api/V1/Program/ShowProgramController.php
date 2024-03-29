@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ShowProgramController extends Controller
 {
     /**
-     * Find video.
+     * Display the specified program.
      *
      * @param Request $request
      * @param Program $program

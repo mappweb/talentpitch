@@ -26,7 +26,7 @@ class CreateChallengeController extends Controller
     }
 
     /**
-     * Create a challenge resource.
+     * Store a newly created challenge in storage.
      *
      * @param ChallengeRequest $request
      * @return JsonResponse
