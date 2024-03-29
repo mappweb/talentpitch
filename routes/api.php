@@ -13,6 +13,10 @@ use App\Http\Controllers\Api\V1\Program\DestroyProgramController;
 use App\Http\Controllers\Api\V1\Program\PaginateProgramController;
 use App\Http\Controllers\Api\V1\Program\ShowProgramController;
 use App\Http\Controllers\Api\V1\Program\UpdateProgramController;
+use App\Http\Controllers\Api\V1\User\DestroyUserController;
+use App\Http\Controllers\Api\V1\User\PaginateUserController;
+use App\Http\Controllers\Api\V1\User\ShowUserController;
+use App\Http\Controllers\Api\V1\User\UpdateUserController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
@@ -31,10 +35,16 @@ Route::prefix('v1')->middleware('auth:sanctum')->group(callback: function (Route
     $router->put('challenges/{challenge}', UpdateChallengeController::class);
     $router->delete('challenges/{challenge}', DestroyChallengeController::class);
 
-    //program
+    //programs
     $router->get('programs', PaginateProgramController::class);
     $router->post('programs', CreateProgramController::class);
     $router->get('programs/{program}', ShowProgramController::class);
     $router->put('programs/{program}', UpdateProgramController::class);
     $router->delete('programs/{program}', DestroyProgramController::class);
+
+    //users
+    $router->get('users', PaginateUserController::class);
+    $router->get('users/{user}', ShowUserController::class);
+    $router->put('users/{user}', UpdateUserController::class);
+    $router->delete('users/{user}', DestroyUserController::class);
 });
