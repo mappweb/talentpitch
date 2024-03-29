@@ -33,7 +33,7 @@ class ChatGPTMock
             return Cache::get($signature);
         }
 
-        $openAiKey = env('OPENAI_API_KEY');
+        $openAiKey = config('app.openai_api_key');
         if (!$openAiKey) {
             throw new InvalidArgumentException(
                 <<<EOT
