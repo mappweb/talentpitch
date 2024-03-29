@@ -4,6 +4,7 @@
 
 - Clonar receta de docker [docker-compose-laravel](https://github.com/mappweb/docker-compose-laravel/tree/feature/laravel-php-8.2).
 - Ubicarse en la raiz del repositorio clonado.
+- Configurar las variables de conexión a la base de datos MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_ROOT_PASSWORD en el archivo docker-compose.yml
 - Construir la imagen de docker `docker-compose up --build`
 - Ubicarse en la carpeta app y clonar el repositorio [talepitch](https://github.com/mappweb/talentpitch) `git clone https://github.com/mappweb/talentpitch.git`
 - Ingresar al contenedor `docker exec -it db_mysql bash`
