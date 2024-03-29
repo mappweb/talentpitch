@@ -25,7 +25,7 @@ class MockChallengeController extends Controller
                keys: [
                    "title",
                    "description",
-                   "difficulty",
+                   "difficulty:1-10",
                ],
                count: 10
            );
