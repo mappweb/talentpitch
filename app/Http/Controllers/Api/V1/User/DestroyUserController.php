@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1\User;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Api\UserResource;
 use App\Models\User;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Traits\PaginateJsonResponse;
@@ -37,9 +38,11 @@ class DestroyUserController extends Controller
      */
    public function __invoke(Request $request, User $user): JsonResponse
    {
+       $deleted = $this->repository->delete($user->id);
+
        return response()->json([
-           'message' => 'User deleted successfully',
-           'data' => $this->repository->delete($user->id),
+           'message' => $deleted ? 'User deleted successfully' : 'User could not be eliminated',
+           'data' => new UserResource($user),
        ]);
    }
 }

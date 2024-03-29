@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1\Challenge;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Api\ChallengeResource;
 use App\Models\Challenge;
 use App\Repositories\Contracts\ChallengeRepositoryInterface;
 use App\Traits\PaginateJsonResponse;
@@ -36,9 +37,11 @@ class DestroyChallengeController extends Controller
      */
    public function __invoke(Request $request, Challenge $challenge): JsonResponse
    {
+       $deleted = $this->repository->delete($challenge->id);
+
        return response()->json([
-           'message' => 'Audits lists successfully',
-           'data' => $this->repository->delete($challenge->id),
+           'message' => $deleted ? 'Challenge deleted successfully' : 'Challenge could not be eliminated',
+           'data' => new ChallengeResource($challenge),
        ]);
    }
 }

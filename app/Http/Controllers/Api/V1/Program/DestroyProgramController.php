@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1\Program;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Api\ProgramResource;
 use App\Models\Program;
 use App\Repositories\Contracts\ProgramRepositoryInterface;
 use App\Traits\PaginateJsonResponse;
@@ -37,9 +38,11 @@ class DestroyProgramController extends Controller
      */
    public function __invoke(Request $request, Program $program): JsonResponse
    {
+       $deleted = $this->repository->delete($program->id);
+
        return response()->json([
-           'message' => 'Audits lists successfully',
-           'data' => $this->repository->delete($program->id),
+           'message' => $deleted ? 'Program deleted successfully' : 'Program could not be eliminated',
+           'data' => new ProgramResource($program),
        ]);
    }
 }
