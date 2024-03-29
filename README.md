@@ -24,6 +24,12 @@
 - Generar la clave de aplicación `php artisan key:generate`
 - Ejecutar comando para montar servicio de la aplicación `php artisan serve --host=0.0.0.0 --port=8000`
 
+### Interactuar con la aplicación
+
+- Crear un usuario `/api/v1/register`
+- Login para obtener el token `/api/v1/login`
+- Configurar token de autorización de tipo Bearer para usar los endpoints de la Api.
+
 ### Api
 
 - Url base `http://0.0.0.0:8000`
@@ -32,3 +38,9 @@
 ### Modelo relacional
 
 - `./documents/relational-model.png`
+
+### ChatGPT Mock Generate
+
+Agregar [API KEY](https://platform.openai.com/api-keys) a la variable de  configuración contenida en el archivo .env:
+OPENAI_API_KEY=
+

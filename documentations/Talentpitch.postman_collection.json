@@ -1,0 +1,2647 @@
+{
+	"info": {
+		"_postman_id": "9d87641f-b51b-4870-9337-c1443fb71ef5",
+		"name": "Talentpitch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27227408"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"diego.toscanof@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						},
+						"description": "Iniciar sesión."
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"diego.toscanof@gmail.com\",\n    \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 20:55:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\"\n}"
+						},
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"diego.toscanof@gmail.com\",\n    \"password\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 20:57:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"9bac3e97-0529-4775-a24a-c9b024c9abb3\",\n        \"name\": \"Diego Toscano\",\n        \"email\": \"diego.toscanof@gmail.com\",\n        \"programs\": [\n            {\n                \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"start_date\": \"2024-04-28\",\n                \"end_date\": \"2024-04-28\"\n            }\n        ]\n    },\n    \"authorization\": {\n        \"token\": \"7|uCwLfjgZfHFalZel3XAtm04qu0ZQzOimQIrWmm8s043e9e6f\",\n        \"type\": \"bearer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Diego\",\n    \"last_name\": \"Toscano\",\n    \"email\": \"diego.toscanof@hotmail.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Diego\",\n    \"last_name\": \"Toscano\",\n    \"email\": \"diego.toscanof@hotmail.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 20:57:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"user\": {\n        \"id\": \"9baeb063-c8e8-4c4c-8075-f7fca37643be\",\n        \"name\": \"Diego Toscano\",\n        \"email\": \"diego.toscanof@hotmail.com\",\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/logout",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 20:58:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Challenges",
+			"item": [
+				{
+					"name": "paginate challenges",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/challenges",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"challenges"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "paginate challenges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/challenges",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"challenges"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 20:58:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Challenges lists successfully\",\n    \"data\": {\n        \"firstItem\": 1,\n        \"lastItem\": 10,\n        \"perPage\": 10,\n        \"currentPage\": 1,\n        \"lastPage\": 3,\n        \"total\": 22,\n        \"items\": [\n            {\n                \"id\": \"9bacc0c6-3330-4ea4-8c3a-d251c28b83d9\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"difficulty\": 1,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bacd493-4b2f-4c5e-9726-4a30c4e9831b\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"difficulty\": 1,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-eebe-45d6-bb20-a2dc3d2e12cb\",\n                \"title\": \"Dr.\",\n                \"description\": \"Ullam esse non accusamus nisi omnis officia. Veniam quidem commodi non similique magni ipsa. Voluptate laudantium reprehenderit vel corrupti eligendi ipsam.\",\n                \"difficulty\": 7,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f0f6-47cc-bf46-9dd40978648e\",\n                \"title\": \"Ms.\",\n                \"description\": \"Quis libero voluptatum dolor ipsum doloremque ex cupiditate. Et at qui ut dolores. Molestias et sunt veritatis maiores.\",\n                \"difficulty\": 0,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f185-49c1-8deb-60239e7f00d1\",\n                \"title\": \"Prof.\",\n                \"description\": \"Deserunt vel necessitatibus quis aperiam rem quia officia. Quas ratione et inventore dolorem. Aspernatur at quia accusantium aut voluptas aut consequatur.\",\n                \"difficulty\": 8,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f21f-4f13-af9b-abab6522d13f\",\n                \"title\": \"Dr.\",\n                \"description\": \"Soluta voluptates quidem qui reiciendis molestias. Explicabo vel rerum consequuntur quas minus eos. Quo non in et dolor ut asperiores vel.\",\n                \"difficulty\": 6,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f2c1-4f20-ab86-a9590472d96d\",\n                \"title\": \"Dr.\",\n                \"description\": \"Voluptatem quidem doloremque nesciunt ullam voluptas dolore sed magni. Fugit maxime ut quia est aut ullam et. Sed amet voluptatem saepe aperiam laudantium omnis repellat.\",\n                \"difficulty\": 4,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f3a7-469d-84b5-5b8e4db13389\",\n                \"title\": \"Mr.\",\n                \"description\": \"Aut saepe hic aut ipsum dolorem. Et dolorem ut aut voluptas. Iste accusamus quisquam dolores laboriosam et ex blanditiis. Voluptatem eum ratione accusamus cum nihil molestiae sapiente.\",\n                \"difficulty\": 0,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f446-4675-8ff0-f3f6dbc18fd3\",\n                \"title\": \"Mr.\",\n                \"description\": \"Saepe deleniti inventore cupiditate necessitatibus laborum porro autem. Vitae fuga ipsam corrupti ut. Ducimus maxime voluptas ducimus voluptas.\",\n                \"difficulty\": 5,\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae47bf-f54c-4232-9222-d0b653f92f58\",\n                \"title\": \"Ms.\",\n                \"description\": \"Ipsa aliquam excepturi maxime. Suscipit enim nesciunt nostrum fuga tempora accusamus. Et voluptas reprehenderit quae numquam quis.\",\n                \"difficulty\": 0,\n                \"programs\": []\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create challenge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Ciclismo\",\n    \"description\": \"50 kms\",\n    \"difficulty\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/challenges",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"challenges"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create challenge",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Ciclismo\",\n    \"description\": \"50 kms\",\n    \"difficulty\": 7\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/challenges",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"challenges"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:00:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Challenge created successfully\",\n    \"data\": {\n        \"id\": \"9baeb141-60bd-4821-9338-a99a13788c76\",\n        \"title\": \"Ciclismo\",\n        \"description\": \"50 kms\",\n        \"difficulty\": 7,\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit challenge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Correr\",\n    \"description\": \"1 kms\",\n    \"difficulty\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/challenges/9bacc0c6-3330-4ea4-8c3a-d251c28b83d9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"challenges",
+								"9bacc0c6-3330-4ea4-8c3a-d251c28b83d9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit challenge",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Correr\",\n    \"description\": \"1 kms\",\n    \"difficulty\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/challenges/9bacc0c6-3330-4ea4-8c3a-d251c28b83d9",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"challenges",
+										"9bacc0c6-3330-4ea4-8c3a-d251c28b83d9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 20:59:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Challenge created successfully\",\n    \"data\": {\n        \"id\": \"9bacc0c6-3330-4ea4-8c3a-d251c28b83d9\",\n        \"title\": \"Correr\",\n        \"description\": \"1 kms\",\n        \"difficulty\": 10,\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "destroy challenge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/challenges/9bacd493-4b2f-4c5e-9726-4a30c4e9831b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"challenges",
+								"9bacd493-4b2f-4c5e-9726-4a30c4e9831b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "destroy challenge",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/challenges/9bacd493-4b2f-4c5e-9726-4a30c4e9831b",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"challenges",
+										"9bacd493-4b2f-4c5e-9726-4a30c4e9831b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:01:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Challenge deleted successfully\",\n    \"data\": {\n        \"id\": \"9bacd493-4b2f-4c5e-9726-4a30c4e9831b\",\n        \"title\": \"Trotar\",\n        \"description\": \"Cardiovascular de calentamiento\",\n        \"difficulty\": 1,\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show challenge",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/challenges/9bacd493-4b2f-4c5e-9726-4a30c4e9831b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"challenges",
+								"9bacd493-4b2f-4c5e-9726-4a30c4e9831b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show challenge",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/challenges/9bacd493-4b2f-4c5e-9726-4a30c4e9831b",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"challenges",
+										"9bacd493-4b2f-4c5e-9726-4a30c4e9831b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:00:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Challenge find successfully\",\n    \"data\": {\n        \"id\": \"9bacd493-4b2f-4c5e-9726-4a30c4e9831b\",\n        \"title\": \"Trotar\",\n        \"description\": \"Cardiovascular de calentamiento\",\n        \"difficulty\": 1,\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "mock challenges",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/challenges/mock-generate",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"challenges",
+								"mock-generate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "mock challenges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/challenges/mock-generate",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"challenges",
+										"mock-generate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 18:11:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"title\": \"Miss Asha Brown DDS\",\n            \"description\": \"Nam quam laborum aspernatur et in aspernatur. In voluptatum numquam omnis harum doloremque quod voluptas. Hic quia beatae dolores explicabo dolorum odit. Nisi placeat voluptate rerum.\",\n            \"difficulty\": 93\n        },\n        {\n            \"title\": \"Scarlett D'Amore\",\n            \"description\": \"Molestias delectus ut fugit ut. Dolores voluptas nostrum non magnam illo ut. Facere unde animi aut minus omnis sequi. Est dolorum laborum vel inventore placeat.\",\n            \"difficulty\": 61465\n        },\n        {\n            \"title\": \"Leola Tremblay\",\n            \"description\": \"Praesentium explicabo possimus unde voluptatem incidunt ut doloremque repellat. Ipsa id temporibus quas autem eaque eligendi pariatur. Et non necessitatibus ipsam beatae vitae quaerat.\",\n            \"difficulty\": 26393315\n        },\n        {\n            \"title\": \"Willow Kub Jr.\",\n            \"description\": \"Sunt est voluptatem eius quia et reprehenderit. Et sunt quos modi similique quos facere dolores optio. Vitae vitae eveniet consectetur tenetur modi nobis aut.\",\n            \"difficulty\": 59206\n        },\n        {\n            \"title\": \"Mr. Moriah Ward\",\n            \"description\": \"Illo dolor eum voluptatum distinctio quia autem soluta qui. Ipsum quidem deserunt incidunt aperiam dolores est quia. Culpa quas molestiae voluptatem eum officiis in.\",\n            \"difficulty\": 518659\n        },\n        {\n            \"title\": \"Cedrick Breitenberg II\",\n            \"description\": \"Commodi aut ut aliquam sequi in voluptates. Aperiam aliquid aliquid doloremque qui animi autem non. Eligendi quidem ea ut eligendi. Vero aspernatur dolorum accusantium quam.\",\n            \"difficulty\": 0\n        },\n        {\n            \"title\": \"Bria Renner\",\n            \"description\": \"Doloribus officiis ratione eum qui nobis suscipit. Sit asperiores pariatur dolore exercitationem sunt dolorem officiis praesentium. Modi aliquid expedita repellat sapiente. Aspernatur temporibus expedita enim aut maiores reiciendis.\",\n            \"difficulty\": 32\n        },\n        {\n            \"title\": \"Prof. Damian Raynor\",\n            \"description\": \"Cupiditate vero id sed quibusdam dolor. Impedit et voluptates eum error dignissimos placeat. Ipsum accusantium ut ut illo quibusdam eum rerum. Sunt distinctio dolores maxime impedit fugit eos ut fugit.\",\n            \"difficulty\": 9185615\n        },\n        {\n            \"title\": \"Sedrick Shanahan\",\n            \"description\": \"Laborum et eligendi eos reiciendis porro nulla. Eveniet aut dicta quia alias quidem sed. Eum possimus inventore deleniti eum quis. Ut et eveniet dicta harum corrupti excepturi aliquam.\",\n            \"difficulty\": 59\n        },\n        {\n            \"title\": \"Terrance Haag\",\n            \"description\": \"Recusandae sed laudantium quia nisi unde quod ut. Dolor dolore ut earum ullam aut. Hic amet ipsa itaque et.\",\n            \"difficulty\": 3773\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Programs",
+			"item": [
+				{
+					"name": "paginate programs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/programs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"programs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "paginate programs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/programs",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"programs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:01:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Programs lists successfully\",\n    \"data\": {\n        \"firstItem\": 1,\n        \"lastItem\": 1,\n        \"perPage\": 10,\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"total\": 1,\n        \"items\": [\n            {\n                \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"start_date\": \"2024-04-28\",\n                \"end_date\": \"2024-04-28\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Natación\",\n    \"description\": \"Nado estilo mariposa\",\n    \"start_date\": \"2024-04-28\",\n    \"end_date\": \"2024-04-28\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/programs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"programs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create program",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Natación\",\n    \"description\": \"Nado estilo mariposa\",\n    \"start_date\": \"2024-04-28\",\n    \"end_date\": \"2024-04-28\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/programs",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"programs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:02:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Program created successfully\",\n    \"data\": {\n        \"id\": \"9baeb224-79b1-46d5-af86-6d5ef258ebaf\",\n        \"title\": \"Natación\",\n        \"description\": \"Nado estilo mariposa\",\n        \"start_date\": \"2024-04-28\",\n        \"end_date\": \"2024-04-28\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add participant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"company\",\n    \"participant_id\": \"9bae4ea6-4688-4d87-9e3b-d263b467b8a6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad/add-participant",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"programs",
+								"9bacea99-1088-4156-8de1-4dfa5d0611ad",
+								"add-participant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add participant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"company\",\n    \"participant_id\": \"9bae4ea6-4688-4d87-9e3b-d263b467b8a6\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad/add-participant",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"programs",
+										"9bacea99-1088-4156-8de1-4dfa5d0611ad",
+										"add-participant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 18:03:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Participant added successfully\",\n    \"data\": {\n        \"id\": \"9bae4ea6-4688-4d87-9e3b-d263b467b8a6\",\n        \"name\": \"Lebsack Group\",\n        \"image_path\": \"https://via.placeholder.com/640x480.png/00dd22?text=cum\",\n        \"location\": \"16539 Hill Passage Apt. 806\\nEast Eveline, KY 51856-9717\",\n        \"industry\": \"Nemo tenetur sint et qui.\",\n        \"created_at\": \"2024-03-29T16:24:21.000000Z\",\n        \"updated_at\": \"2024-03-29T16:24:21.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Baloncesto\",\n    \"description\": \"Cardiovascular de calentamiento\",\n    \"start_date\": \"2024-04-28\",\n    \"end_date\": \"2024-04-28\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"programs",
+								"9bacea99-1088-4156-8de1-4dfa5d0611ad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit program",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Baloncesto\",\n    \"description\": \"Cardiovascular de calentamiento\",\n    \"start_date\": \"2024-04-28\",\n    \"end_date\": \"2024-04-28\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"programs",
+										"9bacea99-1088-4156-8de1-4dfa5d0611ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:03:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Program updated successfully\",\n    \"data\": {\n        \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n        \"title\": \"Baloncesto\",\n        \"description\": \"Cardiovascular de calentamiento\",\n        \"start_date\": \"2024-04-28\",\n        \"end_date\": \"2024-04-28\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "destroy program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"programs",
+								"9bacea99-1088-4156-8de1-4dfa5d0611ad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "destroy program",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"programs",
+										"9bacea99-1088-4156-8de1-4dfa5d0611ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:03:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Program deleted successfully\",\n    \"data\": {\n        \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n        \"title\": \"Baloncesto\",\n        \"description\": \"Cardiovascular de calentamiento\",\n        \"start_date\": \"2024-04-28\",\n        \"end_date\": \"2024-04-28\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show program",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"programs",
+								"9bacea99-1088-4156-8de1-4dfa5d0611ad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show program",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/programs/9bacea99-1088-4156-8de1-4dfa5d0611ad",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"programs",
+										"9bacea99-1088-4156-8de1-4dfa5d0611ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:03:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Program find successfully\",\n    \"data\": {\n        \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n        \"title\": \"Baloncesto\",\n        \"description\": \"Cardiovascular de calentamiento\",\n        \"start_date\": \"2024-04-28\",\n        \"end_date\": \"2024-04-28\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "paginate companies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/companies",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "paginate companies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/companies",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"companies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:04:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Companies lists successfully\",\n    \"data\": {\n        \"firstItem\": 1,\n        \"lastItem\": 10,\n        \"perPage\": 10,\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"total\": 10,\n        \"items\": [\n            {\n                \"id\": \"9bae4ea6-4688-4d87-9e3b-d263b467b8a6\",\n                \"name\": \"Lebsack Group\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/00dd22?text=cum\",\n                \"location\": \"16539 Hill Passage Apt. 806\\nEast Eveline, KY 51856-9717\",\n                \"industry\": \"Nemo tenetur sint et qui.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4940-407c-b912-a0be08f3c754\",\n                \"name\": \"McLaughlin, Rippin and Kirlin\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/0022aa?text=maxime\",\n                \"location\": \"70568 Aufderhar Radial\\nPort Raul, CO 42593-6306\",\n                \"industry\": \"Quia voluptatibus molestias non qui.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4a15-427a-8079-7cb40872acab\",\n                \"name\": \"Cummings Inc\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/00cc55?text=aut\",\n                \"location\": \"83279 Flatley Mill Apt. 371\\nNorth Tod, NV 09518-5249\",\n                \"industry\": \"Ducimus aut omnis consectetur fugit ipsa est voluptas.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4aac-4bd5-991a-c53d57536906\",\n                \"name\": \"Bednar-Rosenbaum\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/00aaee?text=ut\",\n                \"location\": \"6395 Leffler Route\\nPurdyfurt, SC 73655-2027\",\n                \"industry\": \"Dolorem cupiditate velit dolore tempore.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4b62-4cea-8d7f-cd80ea6fe938\",\n                \"name\": \"Vandervort-Boyle\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/002233?text=ullam\",\n                \"location\": \"67275 Syble Cliff Suite 464\\nLizaville, NM 73315\",\n                \"industry\": \"Ea temporibus laborum incidunt.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4c3e-4b97-93ae-da48e54a7c67\",\n                \"name\": \"Shanahan-Tillman\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/00bb22?text=molestiae\",\n                \"location\": \"106 Jacobson Highway\\nMuellerfort, NE 65422\",\n                \"industry\": \"Molestiae ex quo sint ratione rerum.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4cfc-42ae-b374-76534deabb9c\",\n                \"name\": \"Mosciski, Sawayn and Schmeler\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/004499?text=dolores\",\n                \"location\": \"490 Jaylon Cape Suite 141\\nNorth Annettatown, MD 39341\",\n                \"industry\": \"Quibusdam voluptatibus cum veritatis nemo id voluptatibus ut.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4dde-419b-bac4-7af8785c08c8\",\n                \"name\": \"Jakubowski-Larkin\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/000055?text=labore\",\n                \"location\": \"82048 Sylvia Plain\\nLake Vidalton, MD 00181\",\n                \"industry\": \"Quas accusantium animi consequatur aut est.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4e63-4b3d-9dc2-f24bf3af7a5c\",\n                \"name\": \"Rogahn-Dickinson\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/00aa33?text=modi\",\n                \"location\": \"8781 Bosco Lake\\nAndersonchester, FL 39953\",\n                \"industry\": \"Sit ut eos voluptatibus est.\",\n                \"programs\": []\n            },\n            {\n                \"id\": \"9bae4ea6-4f1e-4782-b792-ae2ca2d23022\",\n                \"name\": \"Cole, Marvin and Windler\",\n                \"image_path\": \"https://via.placeholder.com/640x480.png/00cc00?text=facilis\",\n                \"location\": \"16441 Greenfelder Roads\\nOrionbury, HI 28825\",\n                \"industry\": \"Sunt saepe molestias placeat temporibus ducimus quis nisi est.\",\n                \"programs\": []\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cemir SAS\",\n    \"location\": \"Automatización Inteligente\",\n    \"industry\": \"AI\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/companies",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create company",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Cemir SAS\",\n    \"location\": \"Automatización Inteligente\",\n    \"industry\": \"AI\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/companies",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"companies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:05:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Company created successfully\",\n    \"data\": {\n        \"id\": \"9baeb327-343b-4536-ac11-06e4a8292550\",\n        \"name\": \"Cemir SAS\",\n        \"image_path\": null,\n        \"location\": \"Automatización Inteligente\",\n        \"industry\": \"AI\",\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cemir SAS\",\n    \"location\": \"Automatización Inteligente\",\n    \"industry\": \"Bot-AI\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/companies/9baeb327-343b-4536-ac11-06e4a8292550",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"9baeb327-343b-4536-ac11-06e4a8292550"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit company",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Cemir SAS\",\n    \"location\": \"Automatización Inteligente\",\n    \"industry\": \"Bot-AI\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/companies/9baeb327-343b-4536-ac11-06e4a8292550",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"companies",
+										"9baeb327-343b-4536-ac11-06e4a8292550"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:06:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Company updated successfully\",\n    \"data\": {\n        \"id\": \"9baeb327-343b-4536-ac11-06e4a8292550\",\n        \"name\": \"Cemir SAS\",\n        \"image_path\": null,\n        \"location\": \"Automatización Inteligente\",\n        \"industry\": \"Bot-AI\",\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "destroy company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/companies/9bae4ea6-4f1e-4782-b792-ae2ca2d23022",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"9bae4ea6-4f1e-4782-b792-ae2ca2d23022"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "destroy company",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/companies/9bae4ea6-4f1e-4782-b792-ae2ca2d23022",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"companies",
+										"9bae4ea6-4f1e-4782-b792-ae2ca2d23022"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:06:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Company deleted successfully\",\n    \"data\": {\n        \"id\": \"9bae4ea6-4f1e-4782-b792-ae2ca2d23022\",\n        \"name\": \"Cole, Marvin and Windler\",\n        \"image_path\": \"https://via.placeholder.com/640x480.png/00cc00?text=facilis\",\n        \"location\": \"16441 Greenfelder Roads\\nOrionbury, HI 28825\",\n        \"industry\": \"Sunt saepe molestias placeat temporibus ducimus quis nisi est.\",\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show company",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/companies/9bae4ea6-4f1e-4782-b792-ae2ca2d23022",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"9bae4ea6-4f1e-4782-b792-ae2ca2d23022"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show company",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/companies/9bae4ea6-4f1e-4782-b792-ae2ca2d23022",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"companies",
+										"9bae4ea6-4f1e-4782-b792-ae2ca2d23022"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:06:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Program find successfully\",\n    \"data\": {\n        \"id\": \"9bae4ea6-4f1e-4782-b792-ae2ca2d23022\",\n        \"name\": \"Cole, Marvin and Windler\",\n        \"image_path\": \"https://via.placeholder.com/640x480.png/00cc00?text=facilis\",\n        \"location\": \"16441 Greenfelder Roads\\nOrionbury, HI 28825\",\n        \"industry\": \"Sunt saepe molestias placeat temporibus ducimus quis nisi est.\",\n        \"programs\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "mock companies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/companies/mock-generate",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companies",
+								"mock-generate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "mock companies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/companies/mock-generate",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"companies",
+										"mock-generate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 21:07:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"name\": \"Greenfelder Group\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/001199?text=temporibus\",\n            \"location\": \"1856 Dach Summit Suite 551\\nWest Lisa, CO 20362-3650\",\n            \"industry\": \"Nam sit sunt enim odio quae.\"\n        },\n        {\n            \"name\": \"Skiles, Thompson and Borer\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/0033ff?text=ipsam\",\n            \"location\": \"59692 Lindgren Rapids Suite 022\\nPagacberg, MT 14331-2443\",\n            \"industry\": \"Et labore adipisci porro.\"\n        },\n        {\n            \"name\": \"Johnston, Bergnaum and Jaskolski\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/008866?text=quia\",\n            \"location\": \"7934 Williamson Stream\\nStantonchester, IN 19749\",\n            \"industry\": \"Dolorem quo deserunt quo quia.\"\n        },\n        {\n            \"name\": \"Marquardt PLC\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/002288?text=et\",\n            \"location\": \"50360 Bethel Turnpike Suite 839\\nLake Zola, MA 35580-5312\",\n            \"industry\": \"Aliquam dignissimos odio molestiae qui sed ipsam.\"\n        },\n        {\n            \"name\": \"Tillman Group\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/0055aa?text=omnis\",\n            \"location\": \"86578 Ondricka Road\\nEast Stella, NM 28109-5269\",\n            \"industry\": \"Pariatur est corrupti aut voluptates minima neque deleniti accusamus.\"\n        },\n        {\n            \"name\": \"Konopelski, Ziemann and Anderson\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/00ff00?text=ex\",\n            \"location\": \"76924 Lia Inlet\\nBaumbachstad, WI 12032-6510\",\n            \"industry\": \"Sit dolore maxime iure odit placeat aspernatur.\"\n        },\n        {\n            \"name\": \"Welch, Bahringer and Bradtke\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/004477?text=perspiciatis\",\n            \"location\": \"9410 Hessel Cliff\\nLake Ramon, NM 16507-3239\",\n            \"industry\": \"Iure nobis consequatur sed minus nemo quasi.\"\n        },\n        {\n            \"name\": \"Okuneva-Kilback\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/0088ee?text=voluptas\",\n            \"location\": \"7885 Adriel Ridge\\nEdenbury, SC 17080-7829\",\n            \"industry\": \"Distinctio earum est itaque quo eos.\"\n        },\n        {\n            \"name\": \"Rath, Jenkins and Kris\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/0022dd?text=quas\",\n            \"location\": \"147 Laurel Heights\\nHenriettestad, LA 38017-1661\",\n            \"industry\": \"Veritatis perspiciatis veniam minima.\"\n        },\n        {\n            \"name\": \"Collier-Hoppe\",\n            \"image_path\": \"https://via.placeholder.com/640x480.png/0055dd?text=voluptatibus\",\n            \"location\": \"3153 Eldred Glens\\nHayesland, SC 53919-2217\",\n            \"industry\": \"Quas rem culpa eum perferendis.\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "paginate users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "paginate users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"perPage\": \"10\",\n    \"page\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 19:43:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Users lists successfully\",\n    \"data\": {\n        \"firstItem\": 1,\n        \"lastItem\": 2,\n        \"perPage\": 10,\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"total\": 2,\n        \"items\": [\n            {\n                \"id\": \"9bac3a1d-302b-4e40-8f15-079256fd2639\",\n                \"name\": \"Diego Toscano\",\n                \"email\": \"runolfsdottir.brooke@example.org\",\n                \"programs\": [\n                    {\n                        \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                        \"title\": \"Trotar\",\n                        \"description\": \"Cardiovascular de calentamiento\",\n                        \"start_date\": \"2024-04-28\",\n                        \"end_date\": \"2024-04-28\"\n                    }\n                ]\n            },\n            {\n                \"id\": \"9bac3e97-0529-4775-a24a-c9b024c9abb3\",\n                \"name\": \"Diego Toscano\",\n                \"email\": \"diego.toscanof@gmail.com\",\n                \"programs\": [\n                    {\n                        \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                        \"title\": \"Trotar\",\n                        \"description\": \"Cardiovascular de calentamiento\",\n                        \"start_date\": \"2024-04-28\",\n                        \"end_date\": \"2024-04-28\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Diego\",\n    \"last_name\": \"Toscano\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/9bac3a1d-302b-4e40-8f15-079256fd2639",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"9bac3a1d-302b-4e40-8f15-079256fd2639"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Diego\",\n    \"last_name\": \"Toscano\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/9bac3a1d-302b-4e40-8f15-079256fd2639",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"9bac3a1d-302b-4e40-8f15-079256fd2639"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 19:05:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"id\": \"9bac3a1d-302b-4e40-8f15-079256fd2639\",\n        \"name\": \"Diego Toscano\",\n        \"email\": \"runolfsdottir.brooke@example.org\",\n        \"programs\": [\n            {\n                \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"start_date\": \"2024-04-28\",\n                \"end_date\": \"2024-04-28\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "destroy user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/9bac3a1d-302b-4e40-8f15-079256fd2639",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"9bac3a1d-302b-4e40-8f15-079256fd2639"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "destroy user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/9bac3a1d-302b-4e40-8f15-079256fd2639",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"9bac3a1d-302b-4e40-8f15-079256fd2639"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 19:45:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\",\n    \"data\": {\n        \"id\": \"9bac3a1d-302b-4e40-8f15-079256fd2639\",\n        \"name\": \"Diego Toscano\",\n        \"email\": \"runolfsdottir.brooke@example.org\",\n        \"programs\": [\n            {\n                \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"start_date\": \"2024-04-28\",\n                \"end_date\": \"2024-04-28\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/9bac3a1d-302b-4e40-8f15-079256fd2639",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"9bac3a1d-302b-4e40-8f15-079256fd2639"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/9bac3a1d-302b-4e40-8f15-079256fd2639",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"9bac3a1d-302b-4e40-8f15-079256fd2639"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2024 19:44:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User find successfully\",\n    \"data\": {\n        \"id\": \"9bac3a1d-302b-4e40-8f15-079256fd2639\",\n        \"name\": \"Diego Toscano\",\n        \"email\": \"runolfsdottir.brooke@example.org\",\n        \"programs\": [\n            {\n                \"id\": \"9bacea99-1088-4156-8de1-4dfa5d0611ad\",\n                \"title\": \"Trotar\",\n                \"description\": \"Cardiovascular de calentamiento\",\n                \"start_date\": \"2024-04-28\",\n                \"end_date\": \"2024-04-28\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
