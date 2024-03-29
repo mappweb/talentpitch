@@ -5,16 +5,19 @@ use App\Http\Controllers\Api\V1\Auth\LogoutController;
 use App\Http\Controllers\Api\V1\Auth\RegisterController;
 use App\Http\Controllers\Api\V1\Challenge\CreateChallengeController;
 use App\Http\Controllers\Api\V1\Challenge\DestroyChallengeController;
+use App\Http\Controllers\Api\V1\Challenge\MockChallengeController;
 use App\Http\Controllers\Api\V1\Challenge\PaginateChallengeController;
 use App\Http\Controllers\Api\V1\Challenge\ShowChallengeController;
 use App\Http\Controllers\Api\V1\Challenge\UpdateChallengeController;
 use App\Http\Controllers\Api\V1\Company\CreateCompanyController;
 use App\Http\Controllers\Api\V1\Company\DestroyCompanyController;
+use App\Http\Controllers\Api\V1\Company\MockCompanyController;
 use App\Http\Controllers\Api\V1\Company\PaginateCompanyController;
 use App\Http\Controllers\Api\V1\Company\ShowCompanyController;
 use App\Http\Controllers\Api\V1\Company\UpdateCompanyController;
 use App\Http\Controllers\Api\V1\Program\CreateProgramController;
 use App\Http\Controllers\Api\V1\Program\DestroyProgramController;
+use App\Http\Controllers\Api\V1\Program\MockProgramController;
 use App\Http\Controllers\Api\V1\Program\PaginateProgramController;
 use App\Http\Controllers\Api\V1\Program\ShowProgramController;
 use App\Http\Controllers\Api\V1\Program\UpdateProgramController;
@@ -35,6 +38,7 @@ Route::prefix('v1')->middleware('auth:sanctum')->group(callback: function (Route
 
     //Challenges
     $router->get('challenges', PaginateChallengeController::class);
+    $router->get('challenges/mock-generate', MockChallengeController::class);
     $router->post('challenges', CreateChallengeController::class);
     $router->get('challenges/{challenge}', ShowChallengeController::class);
     $router->put('challenges/{challenge}', UpdateChallengeController::class);
@@ -42,6 +46,7 @@ Route::prefix('v1')->middleware('auth:sanctum')->group(callback: function (Route
 
     //programs
     $router->get('programs', PaginateProgramController::class);
+    $router->get('programs/mock-generate', MockProgramController::class);
     $router->post('programs', CreateProgramController::class);
     $router->get('programs/{program}', ShowProgramController::class);
     $router->put('programs/{program}', UpdateProgramController::class);
@@ -55,6 +60,7 @@ Route::prefix('v1')->middleware('auth:sanctum')->group(callback: function (Route
 
     //companies
     $router->get('companies', PaginateCompanyController::class);
+    $router->get('companies/mock-generate', MockCompanyController::class);
     $router->post('companies', CreateCompanyController::class);
     $router->get('companies/{company}', ShowCompanyController::class);
     $router->put('companies/{company}', UpdateCompanyController::class);
