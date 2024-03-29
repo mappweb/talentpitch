@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\V1\User;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\Api\ProgramResource;
+use App\Http\Resources\Api\UserResource;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class ShowUserController extends Controller
    {
        return response()->json([
            'message' => 'User find successfully',
-           'data' => new ProgramResource($user),
+           'data' => new UserResource($user),
        ]);
    }
 }
