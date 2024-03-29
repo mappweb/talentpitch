@@ -25,8 +25,8 @@ class MockProgramController extends Controller
                keys: [
                    "title",
                    "description",
-                   "start_date: Y-m-d",
-                   "end_date: Y-m-d",
+                   "start_date:Y-m-d",
+                   "end_date:Y-m-d",
                ],
                count: 10
            );
