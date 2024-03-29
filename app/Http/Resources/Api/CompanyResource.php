@@ -20,6 +20,7 @@ class CompanyResource extends JsonResource
             'image_path' => $this->image_path,
             'location' => $this->location,
             'industry' => $this->industry,
+            'programs' => ProgramResource::collection($this->programs),
         ];
     }
 }

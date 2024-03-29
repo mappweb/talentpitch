@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\V1\Company\MockCompanyController;
 use App\Http\Controllers\Api\V1\Company\PaginateCompanyController;
 use App\Http\Controllers\Api\V1\Company\ShowCompanyController;
 use App\Http\Controllers\Api\V1\Company\UpdateCompanyController;
+use App\Http\Controllers\Api\V1\Program\AddParticipantToProgramController;
 use App\Http\Controllers\Api\V1\Program\CreateProgramController;
 use App\Http\Controllers\Api\V1\Program\DestroyProgramController;
 use App\Http\Controllers\Api\V1\Program\MockProgramController;
@@ -51,6 +52,7 @@ Route::prefix('v1')->middleware('auth:sanctum')->group(callback: function (Route
     $router->get('programs/{program}', ShowProgramController::class);
     $router->put('programs/{program}', UpdateProgramController::class);
     $router->delete('programs/{program}', DestroyProgramController::class);
+    $router->post('programs/{program}/add-participant', AddParticipantToProgramController::class);
 
     //users
     $router->get('users', PaginateUserController::class);

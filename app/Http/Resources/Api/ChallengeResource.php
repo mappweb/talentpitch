@@ -19,6 +19,7 @@ class ChallengeResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'difficulty' => $this->difficulty,
+            'programs' => ProgramResource::collection($this->programs),
         ];
     }
 }
